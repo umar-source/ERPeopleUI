@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">      
+      <div class="navbar-nav">
+          <div class='nav-item'>
+            <img class="navbar-image" src="https://static1.s123-cdn-static-a.com/uploads/1626207/400_64b5072423a29.jpg" alt="Navbar Image">
+          </div>
+        <ul class='navbar-nav'>       
+            <li class='nav-item'>
+                <a class='nav-link nav-item-text-color' routerLinkActive='active'  [routerLinkActiveOptions]="{exact: true}"
+                [routerLink]="['']">E-Invoicing Software</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link   nav-item-text-color' routerLinkActive='active'  [routerLinkActiveOptions]="{exact: true}"
+            [routerLink]="['']">Features</a>
+      </li>
+            <li class='nav-item'>
+                <a class='nav-link nav-item-text-color' routerLinkActive='active'  [routerLinkActiveOptions]="{exact: true}"
+                  [routerLink]="['']">Pricing</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link nav-item-text-color' routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}"
+                  [routerLink]="['/login']">Sign In</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link signup-button'  [routerLink]="['/signup']">Free Signup</a>
+            </li>
+            <li class='nav-item'>
+                <div class="icon-container">
+                    <img src="assets/icons/phone.svg" alt="Mobile Icon" class="icon-style" />
+                    <a class="nav-link nav-item-text-color" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['']">+966 54 731 5697</a>
+                  </div>
+          </li>
+          
+          </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class='container'>
+    <router-outlet></router-outlet>
+  </div>
+
+
+ 

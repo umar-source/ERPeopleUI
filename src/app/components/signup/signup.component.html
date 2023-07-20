@@ -1,0 +1,75 @@
+<div class="container">
+    <div class="form-box">
+ 
+        <form novalidate  (ngSubmit)="onSubmit()" [formGroup]="signupForm">
+            <h2><b>Sign Up</b></h2>
+
+            <div class="form-group username">
+              <label for="usernameId">Username</label>
+              <input type="text" id="usernameId" formControlName="username" 
+              placeholder="Enter your username"
+              name="username"
+              [ngClass]="{'is-invalid' :  (signupForm.get('username')?.touched || signupForm.get('username')?.dirty) && !signupForm.get('username')?.valid}">
+              <span class="invalid-feedback">
+               <span *ngIf="signupForm.get('username')?.errors?.['required']">
+                Please enter your username.
+               </span>
+               <span *ngIf="signupForm.get('username')?.errors?.['minlength']">
+                The username must be longer than 3 characters.
+               </span>
+              </span>
+            </div>
+
+            <div class="form-group email">
+              <label for="emailId">Email Address</label>
+              <input type="text" id="emailId" formControlName="email" 
+              placeholder="Enter your email address"
+               name="email"
+              [ngClass]="{'is-invalid' : (signupForm.get('email')?.touched ||
+               signupForm.get('email')?.dirty)
+                && !signupForm.get('email')?.valid}">
+              <span class="invalid-feedback">
+                <span *ngIf="signupForm.get('email')?.errors?.['required']">
+                    Please enter your email.
+                </span>
+                <span *ngIf="signupForm.get('email')?.errors?.['email']">
+                    Please enter a valid email.
+                </span>
+              </span>
+            </div>
+            
+            <div class="form-group password">
+              <label for="passwordId">Password</label>
+              <input  [type]="passwordVisible ? 'text' : 'password'" id="passwordId"
+               formControlName="password"
+               placeholder="Enter your password" name="password"
+             
+               [ngClass]="{'is-invalid' : (signupForm.get('password')?.touched 
+               || signupForm.get('password')?.dirty) && 
+               !signupForm.get('password')?.valid}">
+              <i id="pass-toggle-btn"  class="fa-solid "  
+              (click)="togglePasswordVisibility()"></i>
+              <span class="invalid-feedback">
+              <span *ngIf="signupForm.get('password')?.errors?.['required']">
+                Please enter your password.
+              </span>
+              <span *ngIf="signupForm.get('password')?.errors?.['invalidPassword']">
+                Password must contain at least one uppercase letter, one number,
+                 one special character, and be at least 8 characters long.
+              </span>
+              </span>
+            </div>        
+
+            <div class="form-group ">  
+              <button class="btn btn-primary mr-3 submit-btn"
+                  [title]="signupForm.valid ? 'Save your entered data' : 'Disabled until the form data is valid'"
+                  type="submit"
+                  [disabled]="!signupForm.valid" >
+                 Submit</button> 
+                
+            </div>
+          </form>
+       
+    </div>
+  </div>  
+  

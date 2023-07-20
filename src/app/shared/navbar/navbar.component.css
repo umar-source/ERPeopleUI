@@ -1,0 +1,66 @@
+  /* Custom CSS for the signup button */
+ .signup-button {
+    border: 2px solid #0693e3; /* Border color */
+    border-radius: 5px; /* Make it circular */
+    color: #0693e3; /* Text color */
+    padding: 8px 16px; /* Adjust padding as needed */
+    transition: background-color 0.3s; /* Transition for hover effect */
+  }
+
+  /* Hover effect for the signup button */
+ .signup-button:hover {
+    background-color: #0693e3; /* Fill color on hover */
+    color: #fff; /* Text color on hover */
+  }
+ 
+  .nav-item-text-color {
+    color: #928fc2;
+ }
+  
+ .nav-item-text-color:hover {
+    color: #65bff7; /* Text color on hover */
+  }
+
+  .nav-item {
+    padding: 8px 16px; /* Adjust padding as needed */
+    margin: 0 10px; /* Increase spacing between nav-links */
+  }
+
+   /* Custom CSS for the header image */
+   .navbar-image {
+    width: 100%;
+    height: 40px; /* Adjust image height */
+    margin-right: 50px; /* Increase space between image and text */
+    object-fit: cover; /* Maintain aspect ratio */
+    transition: height 0.3s; /* Transition when image size changes */
+  }
+
+   /* Custom CSS to make the navbar stick to the top */
+   .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+
+
+  .navbar {
+    height: 90px; /* Adjust height as needed */
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Optional: Add some space between the icon and the mobile number */
+ .icon-style {
+    margin-right: 3px;
+  }
+
+  .icon-style {
+    width: 24px;
+    height: 24px;
+    /* Add any other custom styles you want */
+  }
